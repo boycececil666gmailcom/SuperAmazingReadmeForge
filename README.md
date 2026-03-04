@@ -83,6 +83,29 @@ Edit `src/core/badge_map.py` and add an entry:
 "My Tool": "https://img.shields.io/badge/MyTool-COLOR?style=flat-square&logo=...",
 ```
 
+## FAQ
+
+### How do I set my README as my GitHub profile page?
+
+GitHub displays a special `README.md` as your profile page when it lives in a repository whose name **exactly matches your GitHub username**.
+
+**Step-by-step:**
+
+1. **Go to GitHub** → [github.com/new](https://github.com/new)
+2. **Set the repository name** to your exact GitHub username (e.g. `janedev` if your username is `janedev`).
+3. Set visibility to **Public**.
+4. **Do not** initialise with a README — we'll upload our own.
+5. Click **Create repository**.
+6. Back in **SuperAmazingReadmeForge**, fill in your details and click **Export README.md**.
+7. Save the file somewhere handy (e.g. your Desktop).
+8. On the new empty repo page, click **"uploading an existing file"** (or use the GitHub web editor).
+9. Drag and drop (or select) your exported `README.md` and click **Commit changes**.
+10. Visit `https://github.com/<your-username>` — your profile now shows your custom README! 🎉
+
+> **Tip:** Any time you want to update your profile, re-export from SuperAmazingReadmeForge and replace the file in that repo.
+
+---
+
 ## Showcase
 
 Here's a real GitHub profile README generated with this tool:
