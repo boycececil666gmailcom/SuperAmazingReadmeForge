@@ -1,0 +1,59 @@
+{
+  "name": "Your Name",
+  "github_username": "your-github-username",
+  "taglines": [
+    "💻 Software Developer  |  🎮 Game Enthusiast  |  🤖 AI Explorer",
+    "Building things that matter, one commit at a time"
+  ],
+  "about": "Passionate software developer with experience in building desktop applications, web services, and exploring AI-driven workflows. I enjoy turning ideas into clean, working software and continuously learning new technologies.",
+  "socials": {
+    "github": "https://github.com/your-github-username",
+    "linkedin": "https://www.linkedin.com/in/your-linkedin/",
+    "email": "your.email@example.com",
+    "twitter": ""
+  },
+  "skills": {
+    "tier1": ["Python", "C#", "Unity", "Git"],
+    "tier2": ["JavaScript", "TypeScript", "React", "Docker"],
+    "tier3": ["Rust", "PyTorch", "Godot", "Kubernetes"]
+  },
+  "projects": [
+    {
+      "name": "awesome-project",
+      "description": "A brief description of what this project does and why it matters.",
+      "tech": ["Python", "Docker", "PostgreSQL"],
+      "demo_url": "https://github.com/your-github-username/awesome-project"
+    },
+    {
+      "name": "another-project",
+      "description": "Another cool project — explain the problem it solves.",
+      "tech": ["C#", "Unity"],
+      "demo_url": ""
+    }
+  ],
+  "background": [
+    {
+      "icon": "🎓",
+      "label": "Education",
+      "value": "B.Sc. Computer Science — Your University (20XX)"
+    },
+    {
+      "icon": "🏢",
+      "label": "Current Role",
+      "value": "Software Engineer @ Your Company"
+    },
+    {
+      "icon": "📍",
+      "label": "Location",
+      "value": "Your City, Your Country"
+    },
+    {
+      "icon": "🌐",
+      "label": "Languages",
+      "value": "English (fluent), Other Language (conversational)"
+    }
+  ],
+  "theme": "developer",
+  "footer_text": "Built with curiosity. Updated with intent.",
+  "sections": ["header", "about", "skills", "projects", "background", "footer"]
+}

@@ -31,6 +31,10 @@ def get_available_themes() -> list[str]:
     ]
 
 
+def get_default_config_path() -> str:
+    return os.path.join(_get_base_dir(), "default.config.json")
+
+
 def save_config(config: ProfileConfig, path: str) -> None:
     with open(path, "w", encoding="utf-8") as f:
         f.write(config.model_dump_json(indent=2))

@@ -2,7 +2,7 @@ from tkinter import filedialog, messagebox
 
 import customtkinter as ctk
 
-from src.core.config_io import get_available_themes, load_config, save_config
+from src.core.config_io import get_available_themes, get_default_config_path, load_config, save_config
 from src.core.renderer import preview_in_browser, render_readme
 from src.core.schema import ProfileConfig
 from src.gui.tabs.tab_background import BackgroundTab
@@ -24,6 +24,7 @@ class App(ctk.CTk):
 
         self._config = ProfileConfig()
         self._build_ui()
+        self._load_default_config()
 
     # ── UI construction ────────────────────────────────────────────────────────
 
@@ -71,7 +72,32 @@ class App(ctk.CTk):
             command=self._export,
         ).pack(side="right", padx=4)
 
+        tip = ctk.CTkFrame(self, fg_color="transparent")
+        tip.pack(fill="x", padx=16, pady=(0, 8))
+        ctk.CTkLabel(
+            tip,
+            text="💡 Tip: Share the config JSON with an AI along with your own data to auto-generate a personalised config for you.",
+            text_color="gray",
+            font=ctk.CTkFont(size=11, slant="italic"),
+            anchor="w",
+            justify="left",
+        ).pack(side="left")
+
     # ── actions ────────────────────────────────────────────────────────────────
+
+    def _load_default_config(self):
+        path = get_default_config_path()
+        if not __import__('os').path.exists(path):
+            return
+        try:
+            self._config = load_config(path)
+            self._theme_var.set(self._config.theme)
+            self._tab_header.load_from(self._config)
+            self._tab_skills.load_from(self._config)
+            self._tab_projects.load_from(self._config)
+            self._tab_background.load_from(self._config)
+        except Exception:
+            pass
 
     def _collect(self) -> ProfileConfig:
         self._tab_header.apply_to(self._config)
