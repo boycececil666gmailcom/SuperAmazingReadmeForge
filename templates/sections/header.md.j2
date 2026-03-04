@@ -1,0 +1,21 @@
+<div align="center">
+
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&pause=800&color={{ theme.accent_color }}&center=true&vCenter=true&random=false&width=800&lines={{ taglines_encoded }}" alt="Typing SVG" />
+</div>
+
+<br/>
+
+{% for social in socials %}
+[![{{ social.label }}]({{ social.badge_url }})]({{ social.url }})
+{% endfor %}
+
+<br/>
+
+{% if github_username %}
+[![GitHub followers](https://img.shields.io/github/followers/{{ github_username }}?label=Follow&style={{ theme.badge_style_social }}&logo=github&color={{ theme.accent_color }}&labelColor=0d1117)](https://github.com/{{ github_username }})
+&nbsp;
+[![Profile views](https://komarev.com/ghpvc/?username={{ github_username }}&style={{ theme.badge_style_social }}&color={{ theme.accent_color }}&label=PROFILE+VIEWS)](https://github.com/{{ github_username }})
+{% endif %}
+
+</div>

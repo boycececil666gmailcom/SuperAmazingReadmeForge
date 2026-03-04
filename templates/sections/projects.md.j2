@@ -1,0 +1,9 @@
+---
+
+## Projects
+
+| Repo | Description | Tech Stack | Demo |
+|------|-------------|------------|------|
+{% for p in projects %}
+| {{ p.name }} | {{ p.description }} | {% for tech in p.tech %}![{{ tech }}]({{ badge_map.get(tech, 'https://img.shields.io/badge/' + tech | urlencode + '-555?style=flat-square') }}) {% endfor %} | {% if p.demo_url %}[Demo]({{ p.demo_url }}){% else %}🔗 *coming soon*{% endif %} |
+{% endfor %}

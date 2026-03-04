@@ -1,0 +1,31 @@
+---
+
+## Core Expertise — *by depth of practice*
+
+<div align="center">
+
+{% if tier1 %}
+**Tier 1 — Primary Focus**
+
+{% for skill in tier1 %}
+![{{ skill }}]({{ badge_map.get(skill, 'https://img.shields.io/badge/' + skill | urlencode + '-555?style=flat-square') }})
+{% endfor %}
+
+{% endif %}
+{% if tier2 %}
+**Tier 2 — Building Experience**
+
+{% for skill in tier2 %}
+![{{ skill }}]({{ badge_map.get(skill, 'https://img.shields.io/badge/' + skill | urlencode + '-555?style=flat-square') }})
+{% endfor %}
+
+{% endif %}
+{% if tier3 %}
+**Tier 3 — Exploring**
+
+{% for skill in tier3 %}
+![{{ skill }}]({{ badge_map.get(skill, 'https://img.shields.io/badge/' + skill | urlencode + '-555?style=flat-square') }})
+{% endfor %}
+
+{% endif %}
+</div>
