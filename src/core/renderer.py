@@ -81,7 +81,7 @@ def render_readme(config: ProfileConfig) -> str:
 def preview_in_browser(markdown_content: str) -> None:
     html_body = md_lib.markdown(
         markdown_content,
-        extensions=["tables", "fenced_code", "nl2br"],
+        extensions=["tables", "fenced_code", "md_in_html"],
     )
     html = f"""<!DOCTYPE html>
 <html lang="en">
